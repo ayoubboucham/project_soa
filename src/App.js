@@ -11,6 +11,10 @@ import {
 import ArticlesPage from './pages/articles'; 
 import CommandesPage from './pages/commandes'; 
 import ClientsPage from './pages/clients'; 
+import Landing from "./landing/Landing";
+import ProductList from "./products/ProductList";
+import Template from "./template/Template";
+import ProductDetail from "./products/detail/ProductDetail";
 
 function App() {
   return (
@@ -19,6 +23,22 @@ function App() {
         <Route path="/articles" element={<ArticlesPage />} />
         <Route path="/commandes" element={<CommandesPage />} />
         <Route path="/clients" element={<ClientsPage />} />
+        <Route path="/clients" element={<ClientsPage />} />
+        <Route path="/" element={<Landing />} />
+        <Route path="/products" element={<ProductList />} />
+        <Route path="/products/:slug" element={<ProductDetail />} />
+        {/* <Route path="/" exact>
+          <Landing />
+        </Route> */}
+        {/* <Route path="/products" exact>
+          <ProductList />
+        </Route>
+        <Route path="/products/:slug">
+          <ProductDetail />
+        </Route> */}
+        {/* <Route path="/" exact>
+          <Landing />
+        </Route> */}
       </Routes>
     </Router>
   );
